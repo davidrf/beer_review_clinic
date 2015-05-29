@@ -1,0 +1,16 @@
+<form action="/beers" method="post">
+  <label for="">Name</label>
+  <input type="text" name="name" id="" value="" />
+
+  <label for="">Description</label>
+  <input type="text" name="description" id="" value="" />
+
+  <label for="">Brewery</label>
+  <select name="brewery">
+    <% @breweries.each do |brewery| %>
+      <option value="<%= brewery["id"] %>"><%= brewery["name"] %></option>
+    <% end %>
+  </select>
+
+  <input type="submit" name="" id="" value="Add a Beer!" />
+</form>

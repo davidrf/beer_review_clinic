@@ -1,0 +1,9 @@
+<h1>Beers!</h1>
+
+<ul>
+  <% @beers.each do |beer| %>
+    <li><a href="/beers/<%= beer["id"] %>"><%= beer["name"] %></a></li>
+  <% end %>
+</ul>
+
+<a href="/beers/new">Add a new beer!</a>
